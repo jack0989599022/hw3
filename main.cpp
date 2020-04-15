@@ -87,7 +87,9 @@ void logger() {
         t[2] = ((float)acc16) / 4096.0f;
         s[2] = ((float)acc16) / 4096.0f;
         cnt++;
-      }else{
+      }
+      
+      else{
         acc16 = (res[0] << 6) | (res[1] >> 2);
         if (acc16 > UINT14_MAX/2)
             acc16 -= UINT14_MAX;
@@ -112,7 +114,9 @@ void logger() {
     if(cos_x <= cos_45){
 
         pc.printf("%f\r\n%f\r\n%f\r\n%d\r\n", s[0], s[1], s[2], 1);
-    }else{
+    }
+    
+    else{
 
         pc.printf("%f\r\n%f\r\n%f\r\n%d\r\n", s[0], s[1], s[2], 0);
     }
