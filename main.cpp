@@ -40,7 +40,7 @@ void FXOS8700CQ_writeRegs(uint8_t * data, int len);
 //trigger the led
 void trigger_LED(){
     redLED = !redLED;
-};
+}
 
 void logger() {
    blink.attach(&trigger_LED, 0.1);
